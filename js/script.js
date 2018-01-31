@@ -57,7 +57,13 @@ var myPlayList = [
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
 	// everything inside this function happens as soon as the page loads!
-
+	$("button").click(function(){
+	
+	var input = $("input").val(); 
+	
+	var  song = addSong(input);
+	
+	});
 
 
 });
@@ -74,7 +80,7 @@ function displaySong(songObject){
 //    to create an HTML element and append it to the playlist on the page
 function displayList(songsArray){
 
-
+var playlisting
 
 }
 
@@ -89,6 +95,14 @@ function clearList(){
 //    pushes a new song to the playlist array
 function addSong(){
 
+var newsong = {
+	
+	// "title": ,
+	// "artist": ,
+	// "imageURL": ,
+	// "playURL": ,
+	
+}
 
 
 }
