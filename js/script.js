@@ -59,10 +59,17 @@ $( document ).ready(function() {
 	// everything inside this function happens as soon as the page loads!
 	$("button").click(function(){
 	
+	for ( var sentence =0; sentence <4; sentence=sentence +1) { 
+           
 	var input = $("input").val(); 
 	
-	var  song = addSong(input);
+	console.log(input)
+	}
 	
+ addSong(input);
+
+displaySong(mySong);
+
 	});
 
 
@@ -72,7 +79,13 @@ $( document ).ready(function() {
 //	  and appends the element to the playlist on the page
 function displaySong(songObject){
 
-
+//want to put in div?
+$("body").append("<div id= 'display'> </div>")
+ $("#display").append('<p>'+songObject.title+'</p>');
+    $("#display").append('<p>'+songObject.artist+'</p>');
+    $("#display").append('<a href='+songObject.imageURL + '>Play link'+'</a>');
+    $("#display").append(' <p> <img src='+songObject.playURL+'> </p>');
+    
 
 }
 
@@ -80,7 +93,7 @@ function displaySong(songObject){
 //    to create an HTML element and append it to the playlist on the page
 function displayList(songsArray){
 
-var playlisting
+
 
 }
 
@@ -93,16 +106,17 @@ function clearList(){
 
 // addSong takes inputs from the input boxes, organizes them into a new song object, and
 //    pushes a new song to the playlist array
-function addSong(){
+function addSong(a,b,c,d){
 
 var newsong = {
 	
-	// "title": ,
-	// "artist": ,
-	// "imageURL": ,
-	// "playURL": ,
+	// "title": a,
+	// "artist": b,
+	// "imageURL": c,
+	// "playURL": d,
 	
 }
 
+// var  song = displayList(newsong);
 
 }
