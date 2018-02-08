@@ -59,19 +59,19 @@ $( document ).ready(function() {
 	// everything inside this function happens as soon as the page loads!
 	$("button").click(function(){
 	
-	for ( var sentence =0; sentence <4; sentence=sentence +1) { 
+	// for ( var sentence =0; sentence <4; sentence=sentence +1) { 
            
-	var input = $("input").val(); 
+	// var input = $("input").val(); 
 	
-	}
+	// }
 	
-			 addSong(input);
-	console.log(input)
+    var object =addSong();
+	// console.log(input)
 	
 	
 
 displaySong(mySong);
-displayList(myPlayList)
+displayList(myPlayList);
 	});
 
 
