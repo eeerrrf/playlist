@@ -63,28 +63,29 @@ $( document ).ready(function() {
            
 	var input = $("input").val(); 
 	
-	console.log(input)
 	}
 	
- addSong(input);
+			 addSong(input);
+	console.log(input)
+	
+	
 
 displaySong(mySong);
-
+displayList(myPlayList)
 	});
 
 
-});
+
 
 // displaySong uses the properties in the songObject to create an HTML element for a single song
 //	  and appends the element to the playlist on the page
 function displaySong(songObject){
 
-//want to put in div?
-$("body").append("<div id= 'display'> </div>")
+$("body").append("<div id= 'display'> </div>");
  $("#display").append('<p>'+songObject.title+'</p>');
     $("#display").append('<p>'+songObject.artist+'</p>');
-    $("#display").append('<a href='+songObject.imageURL + '>Play link'+'</a>');
-    $("#display").append(' <p> <img src='+songObject.playURL+'> </p>');
+    $("#display").append('<a href='+songObject.playURL + '>Play link'+'</a>');
+    $("#display").append(' <p> <img src='+songObject.imageURL+'> </p>');
     
 
 }
@@ -93,8 +94,18 @@ $("body").append("<div id= 'display'> </div>")
 //    to create an HTML element and append it to the playlist on the page
 function displayList(songsArray){
 
-
-
+//var newsong[?].type this is just an example ... notes
+for (var i = 0; i < myPlayList.length; i++){
+	
+	$("body").append("<div id= 'display'> </div>");
+    $("#display").append("<p>" +myPlayList[i].title +"<p>");
+    $("#display").append("<p>" +myPlayList[i].artist +"<p>");
+    $("#display").append("<p><a href=" +myPlayList[i].playURL +">Song link<a></p>");
+    $("#display").append("<p> <img src=" +myPlayList[i].imageURL +"> </p>");
+   
+    
+}
+    
 }
 
 // clearList removes all the content from the playlist on the page
@@ -106,17 +117,24 @@ function clearList(){
 
 // addSong takes inputs from the input boxes, organizes them into a new song object, and
 //    pushes a new song to the playlist array
-function addSong(a,b,c,d){
+function addSong(something){
+
+var a =$("#Title").val();
+var b = $("#Artist").val();
+var c = $("#PlayURL").val();
+var d = $("#ImageURL").val();
 
 var newsong = {
 	
-	// "title": a,
-	// "artist": b,
-	// "imageURL": c,
-	// "playURL": d,
+	 "title": a,
+	 "artist": b,
+	"imageURL": c,
+	 "playURL": d,
 	
-}
+};
+console.log(newsong);
 
 // var  song = displayList(newsong);
 
 }
+});
