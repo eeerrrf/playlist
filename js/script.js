@@ -67,7 +67,23 @@ $( document ).ready(function() {
 	});
 	
 	$(".clear").click(function(){
-	clearList();
+		clearList();
+	});
+	var a = 1
+	$(".clear").click(function(){
+		
+		if(a===1){
+			alert("What do you call it when a robot farts? A gas leak!")
+			a=a+1
+		}
+		else if(a===2){
+			alert("What did the hero do to get his exercise? He went train-ing")
+			a=a+1
+		}
+		else if(a===3){
+			alert("Why didn't the chemist solve the math problem? Because there was no solution")
+			a=a+1
+		}
 	});
 
 
