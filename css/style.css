@@ -14,16 +14,28 @@ h1{
 }
 
 button{
-	border-radius:500px;
 	color:blue;
 }
 
 img{
 	width:400px;
 	height:400px;
+	border:1px solid black;
+	border-radius:4000px;
 }
 
-/*#display{*/
-/*	text-align:center;*/
-/*	border:dashed black 3px;*/
-/*}*/
+#display{
+text-align:center
+
+}
+
+input{
+	background-color:orange;
+}
+
+button:hover{
+		border-radius:500px;
+		background:red;
+}
+
+

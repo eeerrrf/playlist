@@ -126,8 +126,8 @@ var newsong = {
 	
 	 "title": a,
 	 "artist": b,
-	"imageURL": c,
-	 "playURL": d,
+	"imageURL": d,
+	 "playURL": c,
 	
 };
 console.log(newsong);
