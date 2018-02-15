@@ -81,7 +81,7 @@ $( document ).ready(function() {
 			a=a+1
 		}
 		else if(a===3){
-			alert("Why didn't the chemist solve the math problem? Because there was no solution")
+			alert("Why didn't the chemist solve the math problem? Because there was no solution.")
 			a=a+1
 		}
 	});
