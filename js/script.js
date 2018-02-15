@@ -57,21 +57,17 @@ var myPlayList = [
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
 	// everything inside this function happens as soon as the page loads!
-	$("button").click(function(){
-	
-	// for ( var sentence =0; sentence <4; sentence=sentence +1) { 
-           
-	// var input = $("input").val(); 
-	
-	// }
-	
+	$("#button").click(function(){
+		displaySong(mySong);
+		displayList(myPlayList);
     var object =addSong();
-	// console.log(input)
-	
-	
+    console.log (object)
 
-displaySong(mySong);
-displayList(myPlayList);
+
+	});
+	
+	$(".clear").click(function(){
+	clearList();
 	});
 
 
@@ -111,6 +107,8 @@ for (var i = 0; i < myPlayList.length; i++){
 // clearList removes all the content from the playlist on the page
 function clearList(){
 
+return $("#display").empty();
+
 
 
 }
@@ -133,8 +131,8 @@ var newsong = {
 	
 };
 console.log(newsong);
+displaySong(newsong);
 
-// var  song = displayList(newsong);
 
 }
 });
